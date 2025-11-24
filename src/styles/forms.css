@@ -50,20 +50,62 @@ textarea.form-control {
   resize: vertical;
 }
 
-/* Checkbox & Radio (Basic custom styling) */
+/* Custom Checkbox */
 .form-check {
   display: flex;
   align-items: center;
   margin-bottom: var(--spacing-xs);
+  position: relative;
+  padding-left: 1.75rem;
+  /* Space for custom checkbox */
+  cursor: pointer;
 }
 
 .form-check-input {
-  margin-top: 0;
-  margin-right: var(--spacing-sm);
+  position: absolute;
+  opacity: 0;
   cursor: pointer;
+  height: 0;
+  width: 0;
 }
 
 .form-check-label {
   margin-bottom: 0;
   cursor: pointer;
+  user-select: none;
+}
+
+/* Custom Checkbox Indicator */
+.form-check-label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.15rem;
+  /* Align with text */
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  background-color: var(--surface-color);
+  transition: all 0.2s ease-in-out;
+}
+
+/* Checked State */
+.form-check-input:checked+.form-check-label::before {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/%3e%3c/svg%3e");
+}
+
+/* Focus State */
+.form-check-input:focus+.form-check-label::before {
+  box-shadow: 0 0 0 0.2rem rgba(79, 70, 229, 0.25);
+  border-color: var(--primary-color);
+}
+
+/* Disabled State */
+.form-check-input:disabled+.form-check-label::before {
+  background-color: var(--background-color);
+  opacity: 0.6;
+  cursor: not-allowed;
 }
