@@ -44,8 +44,6 @@ h6 {
 
 p {
   margin-bottom: var(--spacing-md);
-  max-width: 65ch;
-  /* Optimal reading length */
 }
 
 a {

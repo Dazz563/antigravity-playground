@@ -241,6 +241,16 @@
   padding-right: var(--spacing-xl) !important;
 }
 
+.mx-auto {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.my-auto {
+  margin-top: auto !important;
+  margin-bottom: auto !important;
+}
+
 /* Text */
 .text-center {
   text-align: center !important;
