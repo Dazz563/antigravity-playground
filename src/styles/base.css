@@ -1,0 +1,72 @@
+/* Reset & Base Styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+html {
+  font-size: 100%;
+  /* 16px */
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 1024px) {
+  html {
+    font-size: 93.75%;
+    /* 15px */
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 87.5%;
+    /* 14px */
+  }
+}
+
+@media (max-width: 640px) {
+  html {
+    font-size: 81.25%;
+    /* 13px */
+  }
+}
+
+body {
+  font-family: var(--font-family-sans);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: var(--line-height-base);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
