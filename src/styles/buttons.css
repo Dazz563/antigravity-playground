@@ -83,14 +83,13 @@
 
 /* Button Sizes */
 .btn-sm {
+  font-size: 1.2rem;
   padding: 0.25rem 0.5rem;
-  font-size: 0.875rem;
   border-radius: var(--radius-sm);
 }
 
 .btn-lg {
   padding: 0.75rem 1.5rem;
-  font-size: 1.25rem;
   border-radius: var(--radius-lg);
 }
 
