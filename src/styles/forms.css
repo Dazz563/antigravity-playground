@@ -80,7 +80,8 @@ textarea.form-control {
   content: "";
   position: absolute;
   left: 0;
-  top: 0.15rem;
+  top: 50%;
+  transform: translateY(-50%);
   /* Align with text */
   width: 1.25rem;
   height: 1.25rem;
@@ -108,6 +109,30 @@ textarea.form-control {
   background-color: var(--background-color);
   opacity: 0.6;
   cursor: not-allowed;
+}
+
+/* Sizes */
+
+/* Small Checkbox */
+.form-check-sm {
+  padding-left: 1.5rem;
+  min-height: 1.25rem;
+}
+
+.form-check-sm .form-check-label::before {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* Large Checkbox */
+.form-check-lg {
+  padding-left: 2.25rem;
+  min-height: 1.75rem;
+}
+
+.form-check-lg .form-check-label::before {
+  width: 1.75rem;
+  height: 1.75rem;
 }
 
 /* Toggle Switch */
@@ -141,7 +166,8 @@ textarea.form-control {
   content: "";
   position: absolute;
   left: 0;
-  top: 0;
+  top: 50%;
+  transform: translateY(-50%);
   width: 2.5rem;
   height: 1.5rem;
   background-color: var(--border-color);
@@ -156,7 +182,8 @@ textarea.form-control {
   content: "";
   position: absolute;
   left: 0.25rem;
-  top: 0.25rem;
+  top: 50%;
+  transform: translateY(-50%);
   width: 1rem;
   height: 1rem;
   background-color: white;
@@ -174,7 +201,7 @@ textarea.form-control {
 }
 
 .form-switch .form-check-input:checked+.form-check-label::after {
-  transform: translateX(1rem);
+  transform: translate(1rem, -50%);
 }
 
 /* Focus State */
@@ -207,11 +234,11 @@ textarea.form-control {
   width: 0.75rem;
   height: 0.75rem;
   left: 0.25rem;
-  top: 0.25rem;
+  top: 50%;
 }
 
 .form-switch-sm .form-check-input:checked+.form-check-label::after {
-  transform: translateX(0.75rem);
+  transform: translate(0.75rem, -50%);
 }
 
 /* Large */
@@ -229,9 +256,9 @@ textarea.form-control {
   width: 1.25rem;
   height: 1.25rem;
   left: 0.25rem;
-  top: 0.25rem;
+  top: 50%;
 }
 
 .form-switch-lg .form-check-input:checked+.form-check-label::after {
-  transform: translateX(1.25rem);
+  transform: translate(1.25rem, -50%);
 }
