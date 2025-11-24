@@ -109,3 +109,129 @@ textarea.form-control {
   opacity: 0.6;
   cursor: not-allowed;
 }
+
+/* Toggle Switch */
+.form-switch {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--spacing-xs);
+  position: relative;
+  padding-left: 3rem;
+  /* Space for switch */
+  cursor: pointer;
+  min-height: 1.5rem;
+}
+
+.form-switch .form-check-input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.form-switch .form-check-label {
+  margin-bottom: 0;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Switch Track */
+.form-switch .form-check-label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2.5rem;
+  height: 1.5rem;
+  background-color: var(--border-color);
+  border-radius: 2rem;
+  transition: background-color 0.2s ease-in-out;
+  border: none;
+  /* Override custom checkbox border */
+}
+
+/* Switch Knob */
+.form-switch .form-check-label::after {
+  content: "";
+  position: absolute;
+  left: 0.25rem;
+  top: 0.25rem;
+  width: 1rem;
+  height: 1rem;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.2s ease-in-out;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Checked State */
+.form-switch .form-check-input:checked+.form-check-label::before {
+  background-color: var(--primary-color);
+  background-image: none;
+  /* Override custom checkbox image */
+  border-color: transparent;
+}
+
+.form-switch .form-check-input:checked+.form-check-label::after {
+  transform: translateX(1rem);
+}
+
+/* Focus State */
+.form-switch .form-check-input:focus+.form-check-label::before {
+  box-shadow: none;
+}
+
+/* Disabled State */
+.form-switch .form-check-input:disabled+.form-check-label::before {
+  background-color: var(--border-color);
+  /* Darker than background-color */
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Sizes */
+
+/* Small */
+.form-switch-sm {
+  padding-left: 2.5rem;
+  min-height: 1.25rem;
+}
+
+.form-switch-sm .form-check-label::before {
+  width: 2rem;
+  height: 1.25rem;
+}
+
+.form-switch-sm .form-check-label::after {
+  width: 0.75rem;
+  height: 0.75rem;
+  left: 0.25rem;
+  top: 0.25rem;
+}
+
+.form-switch-sm .form-check-input:checked+.form-check-label::after {
+  transform: translateX(0.75rem);
+}
+
+/* Large */
+.form-switch-lg {
+  padding-left: 3.5rem;
+  min-height: 1.75rem;
+}
+
+.form-switch-lg .form-check-label::before {
+  width: 3rem;
+  height: 1.75rem;
+}
+
+.form-switch-lg .form-check-label::after {
+  width: 1.25rem;
+  height: 1.25rem;
+  left: 0.25rem;
+  top: 0.25rem;
+}
+
+.form-switch-lg .form-check-input:checked+.form-check-label::after {
+  transform: translateX(1.25rem);
+}
