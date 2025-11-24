@@ -20,29 +20,32 @@ a {
 }
 
 html {
-  font-size: 100%;
-  /* 16px */
+  font-size: 75%;
+  /* Base: 12px */
   scroll-behavior: smooth;
 }
 
+/* Laptop / Tablet Landscape */
 @media (max-width: 1024px) {
   html {
-    font-size: 93.75%;
-    /* 15px */
+    font-size: 68.75%;
+    /* 11px */
   }
 }
 
+/* Tablet Portrait */
 @media (max-width: 768px) {
   html {
-    font-size: 87.5%;
-    /* 14px */
+    font-size: 68.75%;
+    /* 11px */
   }
 }
 
+/* Mobile */
 @media (max-width: 640px) {
   html {
-    font-size: 81.25%;
-    /* 13px */
+    font-size: 62.5%;
+    /* 10px */
   }
 }
 
