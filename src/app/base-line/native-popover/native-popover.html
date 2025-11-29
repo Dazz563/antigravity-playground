@@ -1,0 +1,68 @@
+<div class="popover-showcase-wrapper">
+  <div class="landing-page">
+    <header>
+      <div class="logo">Native Popover API</div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1>Modern Web Popovers</h1>
+        <p class="subtitle">Explore the power of the native HTML Popover API. No JavaScript required for basic functionality.</p>
+      </section>
+
+      <section class="examples">
+        <!-- Example 1: Basic Info Popover -->
+        <div class="example-card">
+          <div class="icon">ℹ️</div>
+          <h3>Basic Info</h3>
+          <p>A simple popover with light dismiss behavior.</p>
+          <button class="btn-primary" popovertarget="info-popover">Show Info</button>
+          
+          <div id="info-popover" popover>
+            <div class="popover-content">
+              <h4>Did you know?</h4>
+              <p>The Popover API allows you to create floating content without complex JavaScript or z-index wars.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Example 2: Custom Backdrop -->
+        <div class="example-card">
+          <div class="icon">🎨</div>
+          <h3>Styled Backdrop</h3>
+          <p>Customize the backdrop with CSS <code>::backdrop</code>.</p>
+          <button class="btn-secondary" popovertarget="backdrop-popover">Show Modal</button>
+
+          <div id="backdrop-popover" popover="manual">
+            <div class="popover-content">
+              <h4>Focus Mode</h4>
+              <p>The backdrop blurs the background content, keeping the user focused on this message.</p>
+              <button class="btn-text" popovertarget="backdrop-popover" popovertargetaction="hide">Close</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Example 3: Manual Trigger (Toast-like) -->
+        <div class="example-card">
+          <div class="icon">🔔</div>
+          <h3>Manual Trigger</h3>
+          <p>Popovers can also be manually triggered via attributes.</p>
+          <button class="btn-primary" popovertarget="toast-popover">Show Toast</button>
+
+          <div id="toast-popover" popover="manual" #toastPopover (toggle)="onToastToggle($event)">
+            <div class="popover-content toast">
+              <div class="toast-message">
+                <h4>Success!</h4>
+                <p>Action completed successfully.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Built with &lt;3 and standard HTML.</p>
+    </footer>
+  </div>
+</div>
