@@ -1,10 +1,15 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { DropdownComponent } from './components/dropdown/dropdown.component';
+import { Darkmode } from './base-line/darkmode/darkmode';
+import { Stylesheet } from './stylesheet/stylesheet';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, DropdownComponent],
+  imports: [
+    RouterOutlet, 
+    Stylesheet,
+    Darkmode
+  ],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
