@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-darkmode',
@@ -7,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrl: './darkmode.css',
 })
 export class Darkmode {
+  isDarkMode = signal(false);
 
+  toggleDarkMode() {
+    this.isDarkMode.update(v => !v);
+  }
 }
