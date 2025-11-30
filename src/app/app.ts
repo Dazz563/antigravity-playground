@@ -3,6 +3,8 @@ import { RouterOutlet } from '@angular/router';
 import { Darkmode } from './base-line/darkmode/darkmode';
 import { NativePopover } from './base-line/native-popover/native-popover';
 import { Stylesheet } from './stylesheet/stylesheet';
+import { SidebarTree } from './aria/tree/tree';
+
 
 @Component({
   selector: 'app-root',
@@ -10,7 +12,8 @@ import { Stylesheet } from './stylesheet/stylesheet';
     // RouterOutlet, 
     // Stylesheet,
     // Darkmode
-    NativePopover
+    // NativePopover,
+    SidebarTree
   ],
   templateUrl: './app.html',
   styleUrl: './app.css'
